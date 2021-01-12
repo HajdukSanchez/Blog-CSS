@@ -223,18 +223,37 @@ header nav .nav-profile-link a {
     min-width: 30%;
 }
 
-.blogs-posts-container .post-container h4 {
-    padding: 1rem 0;
-    font-size: 1.2em;
-}
-
-.blogs-posts-container .post-container p {
+.post-container figure {
+    position: relative;
     margin-bottom: 2rem;
 }
 
 .blogs-posts-container .post-container img {
     width: 100%;
     border-radius: .8rem;
+}
+
+.post-container .post-overlay {
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    display: none;
+}
+
+.post-container figure:hover .post-overlay {
+    display: block;
+    background-color: rgba(71, 207, 172, .8);
+    border-bottom-left-radius: .8rem;
+    border-bottom-right-radius: .8rem;
+}
+
+.blogs-posts-container .post-container .post-overlay h4 {
+    padding: 1rem 0;
+    font-size: 1.2em;
+}
+
+.blogs-posts-container .post-container .post-overlay p {
+    margin-bottom: 2rem;
 }
 
 footer {
