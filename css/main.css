@@ -1,4 +1,8 @@
 /* Developed by Jozek Andrzej Hajduk Sánchez */
+:root {
+    --principal-color:#47cfac;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,10 +12,6 @@
 html {
     font-size: 62.5%;
     font-family: 'Roboto Mono', monospace;
-}
-
-body {
-    overflow: hidden;
 }
 
 a {
@@ -27,11 +27,15 @@ header {
     grid-template-rows: 1fr 1.5fr;
 }
 
+.home-body {
+    overflow: hidden;
+}
+
 header .header-icons-container {
     width: 100%;
     /* height: 100%; */
     display: grid;
-    background-color: #47cfac;
+    background-color: var(--principal-color);
 }
 
 header .header-icons-container .icons {
@@ -100,7 +104,7 @@ header nav .nav-profile-link a {
     margin: auto;
 }
 
-.home-main section .home-main-text {
+.home-main-text {
     font-size: 3rem;
     font-weight: bold;
     letter-spacing: 1rem;
@@ -111,20 +115,143 @@ header nav .nav-profile-link a {
     color: white;
     /* align-self: flex-end; */
     align-self: flex-end;
-    margin-bottom: 12rem;
+    margin-bottom: 7rem;
 }
 
-.home-main .home-main-button {
-    width: 10rem;
+.home-main-button {
+    width: 20rem;
     height: 5rem;
-    background-color: #47cfac;
+    background-color: var(--principal-color);
     outline: none;
     border: 0;
     border-radius: 0.4rem;
-}
-
-.home-main .home-main-button a {
     font-weight: 700;
     font-size: 1.8rem;
 }
 
+.home-main-button:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.blog-body {
+    overflow-x: hidden;
+}
+
+.blogs-main {
+    display: grid;
+}
+
+.grid-container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.blogs-news-container {
+    background-color: #e6e9ed;
+    padding: 0 20rem 4rem;
+}
+
+.blogs-main-news {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 2fr;
+}
+
+.blogs-main-news h3 {
+    margin: 2rem 0;
+    font-size: 1.6rem;
+}
+
+.blogs-news-img-container {
+    grid-column: 1;
+}
+
+.blogs-news-img-container img {
+    width: 85%;
+    border-radius: .8rem;
+}
+
+.blogs-news-info-container {
+    grid-column: 2;
+    margin-top: 2rem;
+}
+
+.blogs-news-info-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.blogs-news-info-container p {
+    margin-bottom: 3.5rem;
+    font-size: 1.3rem;
+}
+
+.blogs-posts-container {
+    padding: 0 5rem 10rem;
+}
+
+.blogs-posts-container h3 {
+    border-bottom: 0.1rem solid #cdd2da;
+    padding: 2rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+}
+
+.blogs-button {
+    border: 0.1rem solid var(--principal-color);
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+}
+
+.blogs-button:hover {
+    background-color: var(--principal-color);
+    color: white;
+    transition: .3s;
+}
+
+.blogs-posts-container .post {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.blogs-posts-container .post .post-container {
+    display: inline-block;
+    padding: 2rem;
+    min-width: 30%;
+}
+
+.blogs-posts-container .post-container h4 {
+    padding: 1rem 0;
+    font-size: 1.2em;
+}
+
+.blogs-posts-container .post-container p {
+    margin-bottom: 2rem;
+}
+
+.blogs-posts-container .post-container img {
+    width: 100%;
+    border-radius: .8rem;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    border-top: 3rem solid var(--principal-color);
+}
+
+footer p {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 5rem;
+    color: white;
+}
+
+footer p a {
+    color: white;
+    font-size: 1.3rem;
+}
