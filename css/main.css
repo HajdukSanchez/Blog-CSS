@@ -23,13 +23,13 @@ a {
 
 header {
     width: 100vw;
-    /* height: 15vh; */
+    height: 15vh;
     display: grid;
     grid-template-rows: 1fr 1.5fr;
 }
 
-.home-body {
-    overflow: hidden;
+main {
+    width: 100vw;
 }
 
 header .header-icons-container {
@@ -82,9 +82,10 @@ header nav .nav-profile-link a {
 }
 
 .home-main {
+    width: 100vw;
+    height: 85vh;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    height: 85vh;
     top: 0;
     bottom: 0;
     /* Imagen de fondo */
@@ -133,10 +134,6 @@ header nav .nav-profile-link a {
 .home-main-button:hover {
     background-color: white;
     cursor: pointer;
-}
-
-.blog-body {
-    overflow-x: hidden;
 }
 
 .blogs-main {
@@ -258,7 +255,7 @@ header nav .nav-profile-link a {
 }
 
 footer {
-    width: 100%;
+    width: 100vw;
     height: auto;
     background-color: black;
     border-top: 3rem solid var(--principal-color);
@@ -276,8 +273,12 @@ footer p a {
     font-size: 1.3rem;
 }
 
+.blog-body {
+    overflow-x: hidden;
+}
+
 .blog-post-img-container {
-    padding: 0 10rem 4rem;
+    padding: 5rem 10rem 4rem;
     display: flex;
     justify-content: center;
 }
@@ -314,34 +315,41 @@ footer p a {
 
 .contact-main-container {
     background-color: var(--secundary-color);
-    padding: 8rem 30rem;
+    padding: 3rem;
     min-height: 25rem;
-    display: grid;
-    gap: 10rem;
-    grid-template-columns: 1fr 1fr;
-}
-
-.contact {
-    /* width: 50%; */
-    height: 100%;
 }
 
 .contact-main-container .contact {
     text-align: left;
     display: flex;
     justify-self: center;
+    width: 80%;
+    height: 100%;
+    margin: 2rem auto;
+    padding: 3rem 5rem;
+}
+
+.contact .contact-left, .contact-rigth {
+    display: flex;
+    align-items: center;
+}
+
+.contact .contact-left div, .contact-rigth div {
+    margin: 2rem;
+    font-size: 1.2rem;
+    text-align: justify;
 }
 
 .contact-main-container .contact .contact-image img {
     width: 10rem;
 }
 
-.contact-main-container .contact div {
+/* .contact-main-container .contact div {
     display: inline-block;
     margin: auto 2rem;
     font-size: 1.2em;
     text-align: justify;
-}
+} */
 
 .contact-main-container .contact a {
     border-bottom: .1rem solid black;
@@ -351,4 +359,58 @@ footer p a {
 
 .contact-main-container .contact div p {
     margin-top: 1rem;
+}
+
+.profile-main-container {
+    padding: 7rem 4rem;
+    background-color: var(--secundary-color);
+    margin-bottom: 5rem;
+}
+
+.profile-main-container .profile-container {
+    display: flex;
+}
+
+.profile-main-container .profile-container div h2 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.profile-main-container .profile-container div p {
+    font-size: 1.4rem;
+}
+
+.profile-main-container figure img {
+    width: 50rem;
+    margin-right: 3rem;
+    border-radius: .8rem;
+}
+
+.profile-main-proyects {
+    padding: 0 5rem 4rem;
+}
+
+.profile-main-proyects h3 {
+    padding-bottom: 2rem;
+    border-bottom: .1rem solid var(--secundary-color);
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.profile-main-proyects .proyects-main-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    margin-top: 3rem;
+    text-align: justify;
+}
+
+.profile-main-proyects .proyects-main-container h4 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile-main-proyects .proyects-main-container p {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
 }
